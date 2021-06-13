@@ -4,10 +4,7 @@ import GoogleAuth from "./GoogleAuth";
 
 const Header = () => {
     return (
-        <div
-            className="ui secondary pointing menu"
-            style={{ marginTop: "2px", marginBottom: "3px" }}
-        >
+        <div className="ui primary pointing menu" style={{ borderRadius: "0" }}>
             <Link to="/" className="header item">
                 Stream
             </Link>
@@ -15,7 +12,9 @@ const Header = () => {
                 <Link to="/" className="item">
                     All Streams
                 </Link>
-                <GoogleAuth />
+                <div className="item">
+                    <GoogleAuth />
+                </div>
             </div>
         </div>
     );

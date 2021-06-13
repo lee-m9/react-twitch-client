@@ -36,6 +36,7 @@ class GoogleAuth extends Component {
     };
 
     renderAuthButton() {
+        const borderRadius = { borderRadius: "0" };
         if (this.props.isSignedIn === null) {
             return <button className="circular ui red loading button"></button>;
         } else if (this.props.isSignedIn) {
@@ -43,6 +44,7 @@ class GoogleAuth extends Component {
                 <button
                     className="ui red google button"
                     onClick={this.onSignOutClick}
+                    style={borderRadius}
                 >
                     <i className="google icon"></i>
                     Sign Out
@@ -53,6 +55,7 @@ class GoogleAuth extends Component {
                 <button
                     className="ui red google button"
                     onClick={this.onSignInClick}
+                    style={borderRadius}
                 >
                     <i className="google icon"></i>
                     Sign In with Google
